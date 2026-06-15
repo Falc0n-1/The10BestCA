@@ -1,0 +1,280 @@
+/* 
+  External CSS for The 10 Best CA
+  This file handles the main design system, typography, colors, and layout structure.
+*/
+
+/* --- Variables & Color Scheme --- */
+:root {
+  /* Using a non-neutral color scheme inspired by Canada (Red and deep Blue/Slate) */
+  --primary-red: #d52b1e;
+  /* Canadian flag red */
+  --primary-dark: #1a202c;
+  /* Slate dark blue */
+  --secondary-bg: #f7fafc;
+  /* Very light gray/blue */
+  --text-dark: #2d3748;
+  --text-light: #ffffff;
+  --transition-speed: 0.3s;
+}
+
+/* --- Base Typography & Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Sans-serif for readability and modern look */
+  font-family:
+    "Inter", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--secondary-bg);
+  line-height: 1.6;
+}
+
+/* Serif font for headings to create a contrast in typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", "Georgia", serif;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Layout Utilities (Flexbox) --- */
+/* 
+  COMMENT: This container class uses Flexbox to center the content horizontally 
+  and limit the maximum width to maintain readability on large screens. 
+*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Navigation --- */
+header {
+  background-color: rgba(
+    26,
+    32,
+    44,
+    0.85
+  ); /* Semi-transparent for glass effect */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--text-light);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-red);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  font-weight: 500;
+  transition: color var(--transition-speed) ease;
+}
+
+.nav-links li a:hover {
+  color: var(--primary-red);
+  /* Transition effect on hover */
+}
+
+/*  Hero Section  */
+/* 
+  COMMENT: The hero section uses flexbox to align text over a background image.
+  We use relative positioning and a linear gradient overlay to ensure the white text 
+  remains accessible (high contrast) regardless of the background image behind it.
+*/
+.title-section {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-light);
+  background-size: cover;
+  background-position: center;
+}
+
+.title-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 32, 44, 0.6);
+  /* Dark overlay for contrast */
+  z-index: 1;
+}
+
+.title-content {
+  position: relative;
+  z-index: 2;
+  padding: 3rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.title-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--primary-red);
+  color: var(--text-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition:
+    background-color var(--transition-speed) ease,
+    transform var(--transition-speed) ease;
+}
+
+.btn-primary:hover {
+  background-color: #b02015;
+  /* Darker red */
+  transform: translateY(-2px);
+  /* Animation / Transform on hover */
+}
+
+/*  CSS Grid Layout for Top 10 (top10.html)  */
+/* 
+  COMMENT: This CSS Grid dynamically creates columns based on the screen width.
+  minmax(300px, 1fr) ensures cards are at least 300px wide, and 1fr means they take up 
+  the remaining space evenly.
+*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.card {
+  background-color: var(--text-light);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  /* CSS transformation adding visual appeal */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+/*  Forms (Contact Section)  */
+.contact-section {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  padding: 4rem 0;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+/*  Footer  */
+footer {
+  background-color: var(--text-dark);
+  color: var(--text-light);
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: auto;
+}
+
+.social-links {
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: color var(--transition-speed) ease;
+}
+
+.social-links a:hover {
+  color: var(--primary-red);
+}
+
+/* Typography hierarchy & utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}

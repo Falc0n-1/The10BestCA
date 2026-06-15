@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Top 10 CA - Destinations</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container nav-container">
+        <div class="logo">The10BestCA</div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="top10.html" style="color: var(--primary-red)"
+                >The Top 10</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="container mt-2">
+        <h1 class="text-center">Top 10 Places in Canada</h1>
+        <p class="text-center mb-2">
+          Explore the most iconic and beautiful destinations in Canada.
+        </p>
+
+        <!-- 
+              CSS Grid Implementation for Responsive Design.
+              Cards animate on hover via CSS transitions.
+            -->
+        <div class="grid-container">
+          <!-- Destination 1 -->
+          <article class="card">
+            <img
+              src="images/Banff National Park.jpg"
+              alt="Banff National Park landscape"
+              class="card-img" />
+            <div class="card-content">
+              <h2>1. Banff National Park, AB</h2>
+              <p>
+                Famous for its surreal turquoise glacial lakes and majestic
+                mountain peaks.
+              </p>
+            </div>
+          </article>
+
+          <!-- Destination 2 -->
+          <article class="card">
+            <img
+              src="images/Niagara Falls.jpg"
+              alt="Niagara Falls water flow"
+              class="card-img" />
+            <div class="card-content">
+              <h2>2. Niagara Falls, ON</h2>
+              <p>
+                One of the most powerful and famous waterfalls in the entire
+                world.
+              </p>
+            </div>
+          </article>
+
+          <!-- Destination 3 -->
+          <article class="card">
+            <img
+              src="images/CN Tower.jpg"
+              alt="CN Tower in Toronto"
+              class="card-img" />
+            <div class="card-content">
+              <h2>3. CN Tower, Toronto, ON</h2>
+              <p>
+                An iconic staple of the Toronto skyline offering incredible city
+                views.
+              </p>
+            </div>
+          </article>
+
+          <!-- Destination 4 -->
+          <article class="card">
+            <img
+              src="images/Old Quebec.jpg"
+              alt="Old Quebec streets"
+              class="card-img" />
+            <div class="card-content">
+              <h2>4. Old Quebec, QC</h2>
+              <p>
+                Step back in time with cobblestone streets and European
+                architecture.
+              </p>
+            </div>
+          </article>
+
+          <!-- Destination 5 -->
+          <article class="card">
+            <img
+              src="images/Whistler.jpg"
+              alt="Whistler mountains"
+              class="card-img" />
+            <div class="card-content">
+              <h2>5. Whistler, BC</h2>
+              <p>
+                A premier skiing destination and an outdoor adventurer's
+                paradise year-round.
+              </p>
+            </div>
+          </article>
+
+          <!-- Destination 6 -->
+          <article class="card">
+            <img
+              src="images/Gros Morne National Park.jpg"
+              alt="Gros Morne National Park"
+              class="card-img" />
+            <div class="card-content">
+              <h2>6. Gros Morne, NL</h2>
+              <p>
+                A UNESCO World Heritage site known for dramatic fjords and
+                unique geology.
+              </p>
+            </div>
+          </article>
+
+          <!-- Destination 7 -->
+          <article class="card">
+            <img
+              src="images/Parliament Hill.jpg"
+              alt="Parliament Hill in Ottawa"
+              class="card-img" />
+            <div class="card-content">
+              <h2>7. Parliament Hill, Ottawa, ON</h2>
+              <p>
+                The political heart of Canada, featuring stunning Gothic Revival
+                architecture.
+              </p>
+            </div>
+          </article>
+
+          <!-- Destination 8 -->
+          <article class="card">
+            <img
+              src="images/Bay of Fundy.jpg"
+              alt="Bay of Fundy rocks"
+              class="card-img" />
+            <div class="card-content">
+              <h2>8. Bay of Fundy, NB/NS</h2>
+              <p>
+                Home to the highest tides in the world and amazing rock
+                formations.
+              </p>
+            </div>
+          </article>
+
+          <!-- Destination 9 -->
+          <article class="card">
+            <img
+              src="images/Stanley Park.jpg"
+              alt="Stanley Park seawall"
+              class="card-img" />
+            <div class="card-content">
+              <h2>9. Stanley Park, Vancouver, BC</h2>
+              <p>
+                A massive urban oasis featuring a scenic seawall and ancient
+                cedars.
+              </p>
+            </div>
+          </article>
+
+          <!-- Destination 10 -->
+          <article class="card">
+            <img
+              src="images/Churchill.jpg"
+              alt="Polar bear in Churchill"
+              class="card-img" />
+            <div class="card-content">
+              <h2>10. Churchill, MB</h2>
+              <p>
+                The polar bear capital of the world and a great place to see the
+                Northern Lights.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact Form Section (Interactive Element Requirement) -->
+      <section class="contact-section">
+        <div class="container">
+          <h2 class="text-center">Have a suggestion?</h2>
+          <p class="text-center mb-2">
+            Let us know if there's a destination we missed!
+          </p>
+
+          <form class="contact-form" action="#" method="GET">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Your email" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+                placeholder="Tell us your favorite spot in Canada!"></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn-primary"
+              style="align-self: flex-start">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="social-links">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook"
+            >Facebook</a
+          >
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="Twitter"
+            >Twitter</a
+          >
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+            >Instagram</a
+          >
+        </div>
+        <p>&copy; 2026 The 10 Best CA. Created for WD10S Final Project.</p>
+      </div>
+    </footer>
+  </body>
+</html>
