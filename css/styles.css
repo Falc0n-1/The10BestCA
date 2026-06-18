@@ -1,58 +1,96 @@
-/* 
+/*
   External CSS for The 10 Best CA
-  This file handles the main design system, typography, colors, and layout structure.
+
+  this stylesheet is responsible for the full visual structure of the website.
+  it controls typography, layout, spacing, colors, and interactive effects.
+
+  the goal is to keep the design clean, responsive, and consistent across all pages.
 */
 
-/* --- Variables & Color Scheme --- */
+/*
+  color system (css variables)
+
+  these variables define the main color palette used throughout the site.
+  using variables makes it easier to update the theme in one place without
+  rewriting styles everywhere in the file.
+*/
 :root {
-  /* Using a non-neutral color scheme inspired by Canada (Red and deep Blue/Slate) */
+  /* main accent color used for buttons, highlights, and branding elements */
   --primary-red: #d52b1e;
-  /* Canadian flag red */
+
+  /* dark background color used for header and footer sections */
   --primary-dark: #1a202c;
-  /* Slate dark blue */
+
+  /* light background used for page sections to keep content readable */
   --secondary-bg: #f7fafc;
-  /* Very light gray/blue */
+
+  /* main body text color for better readability on light backgrounds */
   --text-dark: #2d3748;
+
+  /* light text color used on dark backgrounds like header/footer */
   --text-light: #ffffff;
+
+  /* global transition speed used for hover effects and animations */
   --transition-speed: 0.3s;
 }
 
-/* --- Base Typography & Reset --- */
+/*
+  reset & base styles
+
+  this section removes default browser spacing and ensures consistent layout
+  behavior across different browsers by using box-sizing and reset rules.
+*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/*
+  base page styling
+
+  sets the default font family, background color, text color, and line height
+  for the entire website to ensure consistent readability and spacing.
+*/
 body {
-  /* Sans-serif for readability and modern look */
-  font-family:
-    "Inter", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: var(--text-dark);
   background-color: var(--secondary-bg);
   line-height: 1.6;
 }
 
-/* Serif font for headings to create a contrast in typography */
+/*
+  heading styles
+
+  all headings use a serif font to create contrast with body text and give
+  a more structured, editorial feel to titles and sections.
+*/
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Merriweather", "Georgia", serif;
+  font-family: Georgia, serif;
   margin-bottom: 1rem;
 }
 
+/*
+  link styling
+
+  removes default underline and makes links inherit the surrounding text color
+  so they blend naturally into the design unless hovered or styled separately.
+*/
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* --- Layout Utilities (Flexbox) --- */
-/* 
-  COMMENT: This container class uses Flexbox to center the content horizontally 
-  and limit the maximum width to maintain readability on large screens. 
+/*
+  layout container
+
+  this class is used to center content on the page and limit the maximum width
+  so text does not stretch too wide on large screens, improving readability.
 */
 .container {
   max-width: 1200px;
@@ -60,14 +98,14 @@ a {
   padding: 0 20px;
 }
 
-/* --- Navigation --- */
+/*
+  header / navigation bar
+
+  the header is sticky so it stays visible when scrolling.
+  it uses a semi-transparent background with blur to create a glass effect.
+*/
 header {
-  background-color: rgba(
-    26,
-    32,
-    44,
-    0.85
-  ); /* Semi-transparent for glass effect */
+  background-color: rgba(26, 32, 44, 0.85);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: var(--text-light);
@@ -77,39 +115,65 @@ header {
   z-index: 100;
 }
 
+/*
+  navigation layout
+
+  flexbox is used to space out the logo on the left and navigation links on
+  the right, keeping everything aligned and responsive.
+*/
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/*
+  logo styling
+
+  makes the logo stand out using a bold font weight and brand color.
+*/
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary-red);
 }
 
+/*
+  navigation links list
+
+  removes bullet points and arranges links horizontally with spacing between them.
+*/
 .nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
 }
 
+/*
+  navigation link behavior
+
+  adds smooth transition for hover effects so color changes feel animated
+  instead of instant.
+*/
 .nav-links li a {
   font-weight: 500;
   transition: color var(--transition-speed) ease;
 }
 
+/*
+  navigation hover effect
+
+  highlights links with brand color when hovered for better user interaction feedback.
+*/
 .nav-links li a:hover {
   color: var(--primary-red);
-  /* Transition effect on hover */
 }
 
-/*  Hero Section  */
-/* 
-  COMMENT: The hero section uses flexbox to align text over a background image.
-  We use relative positioning and a linear gradient overlay to ensure the white text 
-  remains accessible (high contrast) regardless of the background image behind it.
+/*
+  hero section (main banner)
+
+  this section creates a large visual introduction area with background image support,
+  centered content, and overlay layering for readability.
 */
 .title-section {
   position: relative;
@@ -124,6 +188,12 @@ header {
   background-position: center;
 }
 
+/*
+  hero overlay
+
+  this dark overlay ensures that text remains readable regardless of background image
+  brightness or complexity.
+*/
 .title-overlay {
   position: absolute;
   top: 0;
@@ -131,10 +201,15 @@ header {
   width: 100%;
   height: 100%;
   background: rgba(26, 32, 44, 0.6);
-  /* Dark overlay for contrast */
   z-index: 1;
 }
 
+/*
+  hero content box
+
+  this is the centered glass-style container that holds the main title and button.
+  it uses blur and transparency for a modern UI effect.
+*/
 .title-content {
   position: relative;
   z-index: 2;
@@ -147,11 +222,21 @@ header {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
+/*
+  hero title
+
+  large font size is used to immediately capture attention when the page loads.
+*/
 .title-content h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
 }
 
+/*
+  primary button
+
+  main call-to-action button styled with brand color and smooth hover animation.
+*/
 .btn-primary {
   display: inline-block;
   background-color: var(--primary-red);
@@ -164,18 +249,21 @@ header {
     transform var(--transition-speed) ease;
 }
 
+/*
+  button hover effect
+
+  gives feedback to user by slightly lifting the button and changing its shade.
+*/
 .btn-primary:hover {
   background-color: #b02015;
-  /* Darker red */
   transform: translateY(-2px);
-  /* Animation / Transform on hover */
 }
 
-/*  CSS Grid Layout for Top 10 (top10.html)  */
-/* 
-  COMMENT: This CSS Grid dynamically creates columns based on the screen width.
-  minmax(300px, 1fr) ensures cards are at least 300px wide, and 1fr means they take up 
-  the remaining space evenly.
+/*
+  grid layout system
+
+  this grid automatically adjusts the number of columns depending on screen size.
+  each card keeps a minimum width while expanding evenly on larger screens.
 */
 .grid-container {
   display: grid;
@@ -184,6 +272,11 @@ header {
   padding: 4rem 0;
 }
 
+/*
+  content card
+
+  each card is a reusable component with shadow, rounded corners, and hover animation.
+*/
 .card {
   background-color: var(--text-light);
   border-radius: 8px;
@@ -194,29 +287,53 @@ header {
     box-shadow var(--transition-speed) ease;
 }
 
+/*
+  card hover interaction
+
+  adds a slight zoom effect and deeper shadow to create a sense of depth.
+*/
 .card:hover {
   transform: scale(1.03);
-  /* CSS transformation adding visual appeal */
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
 }
 
+/*
+  card image styling
+
+  ensures images always fill the card width and maintain consistent height
+  while cropping overflow in a clean way.
+*/
 .card-img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
+/*
+  card text content
+
+  padding inside the card ensures text does not touch edges and improves readability.
+*/
 .card-content {
   padding: 1.5rem;
 }
 
-/*  Forms (Contact Section)  */
+/*
+  contact section
+
+  this section uses a dark background to visually separate it from the rest of the page.
+*/
 .contact-section {
   background-color: var(--primary-dark);
   color: var(--text-light);
   padding: 4rem 0;
 }
 
+/*
+  contact form layout
+
+  centers the form and stacks inputs vertically for a clean mobile-friendly layout.
+*/
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -225,16 +342,32 @@ header {
   gap: 1.5rem;
 }
 
+/*
+  form grouping
+
+  groups label and input together for better structure and spacing consistency.
+*/
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
+/*
+  form labels
+
+  slightly bold text improves readability and helps users identify fields quickly.
+*/
 .form-group label {
   font-weight: 500;
 }
 
+/*
+  form inputs and textarea
+
+  basic styling to make inputs consistent across browsers and visually aligned
+  with the overall design system.
+*/
 .form-group input,
 .form-group textarea {
   padding: 0.75rem;
@@ -243,7 +376,11 @@ header {
   font-family: inherit;
 }
 
-/*  Footer  */
+/*
+  footer section
+
+  provides a clear ending area for the page with centered text and consistent styling.
+*/
 footer {
   background-color: var(--text-dark);
   color: var(--text-light);
@@ -252,29 +389,51 @@ footer {
   margin-top: auto;
 }
 
+/*
+  social links
+
+  spacing and hover effects for icons or links in the footer.
+*/
 .social-links {
   margin-bottom: 1rem;
 }
 
+/*
+  social link interaction
+
+  subtle hover color change to match brand style.
+*/
 .social-links a {
   display: inline-block;
   margin: 0 10px;
   transition: color var(--transition-speed) ease;
 }
 
+/*
+  social link hover effect
+*/
 .social-links a:hover {
   color: var(--primary-red);
 }
 
-/* Typography hierarchy & utility classes */
+/*
+  utility classes
+
+  small helper classes used throughout the site to quickly adjust alignment and spacing
+  without rewriting new CSS rules.
+*/
+
+/* center text */
 .text-center {
   text-align: center;
 }
 
+/* margin bottom spacing */
 .mb-2 {
   margin-bottom: 2rem;
 }
 
+/* margin top spacing */
 .mt-2 {
   margin-top: 2rem;
 }

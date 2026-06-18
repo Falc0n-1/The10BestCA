@@ -1,14 +1,21 @@
+<!--
+  Name:          Ostap Voloshyn
+  Course:        Web Development 9
+  Teacher:       Mr. Hardman
+  School:        Pembina Trails Collegiate
+  Date Last Modified: June 18th, 2026 
+-->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- page title shown in browser tab -->
     <title>The 10 Best CA - Home</title>
-
-    <!-- External CSS -->
+    <!-- external css file (main design system for the website) -->
     <link rel="stylesheet" href="css/styles.css" />
-
-    <!-- Internal CSS -->
+    <!-- internal css (only used for this specific page element) -->
+    <!-- this style is used to highlight the "about" section differently -->
     <style>
       .about-highlight {
         background-color: #f8f8ff;
@@ -19,62 +26,68 @@
       }
     </style>
   </head>
-
   <body>
-    <!-- Header -->
+    <!-- header section (navigation bar at the top of the page) -->
+    <!-- this stays consistent across all pages for easy navigation -->
     <header>
       <div class="container nav-container">
+        <!-- logo area (clicking returns user to homepage) -->
         <div class="logo">
           <a href="index.html">The10BestCA</a>
         </div>
-
+        <!-- main navigation menu -->
         <nav aria-label="Main navigation">
           <ul class="nav-links">
+            <!-- link to homepage -->
             <li><a href="index.html">Home</a></li>
+            <!-- link to top 10 destinations page -->
             <li><a href="top10.html">The Top 10</a></li>
           </ul>
         </nav>
       </div>
     </header>
-
-    <!-- Main Content -->
+    <!-- main content area of the page -->
     <main>
-      <!-- Hero Section -->
+      <!-- hero section (large banner area at the top of the page) -->
+      <!-- this section uses a background image set inline for this page -->
       <section
         class="title-section"
         style="
           background-image: url(&quot;images/Banff National Park.jpg&quot;);
         ">
+        <!-- dark overlay layer to improve text readability over image -->
         <div class="title-overlay"></div>
-
+        <!-- centered hero content (title, description, button) -->
         <div class="title-content">
+          <!-- main page heading -->
           <h1>Discover the Beauty of Canada</h1>
-
+          <!-- short description under the main title -->
           <p>
             Explore the 10 most breathtaking destinations across the Great White
             North.
           </p>
-
+          <!-- call-to-action button linking to top 10 page -->
           <a href="top10.html" class="btn-primary mt-2"> View the Top 10 </a>
         </div>
       </section>
-
-      <!-- About Section -->
+      <!-- about section (explains purpose of the website) -->
       <section class="container mt-2 mb-2">
+        <!-- section title centered -->
         <h2 class="text-center" style="color: var(--primary-red)">
           Why We Made This List
         </h2>
-
+        <!-- highlighted content box for mission statement -->
         <div class="about-highlight">
+          <!-- subheading inside about section -->
           <h3>Our Mission</h3>
-
+          <!-- paragraph explaining purpose of site -->
           <p>
             <span class="highlight-text">The 10 Best CA</span>
             is dedicated to showcasing the unparalleled beauty of Canada. From
             the majestic Rocky Mountains to the historic streets of Old Quebec,
             our curated list aims to inspire your next adventure.
           </p>
-
+          <!-- additional explanation paragraph -->
           <p>
             Whether you're looking for a peaceful nature retreat or a vibrant
             cultural experience, these destinations have been handpicked to give
@@ -82,8 +95,9 @@
             part of the Web Development 10S Final Project.
           </p>
         </div>
-
+        <!-- image section to visually support the content -->
         <figure style="text-align: center; margin-top: 2rem; margin-bottom: 0">
+          <!-- featured image with accessibility description -->
           <img
             src="images/Banff National Park.jpg"
             alt="A beautiful Canadian lake reflecting the mountains"
@@ -91,11 +105,12 @@
         </figure>
       </section>
     </main>
-
-    <!-- Footer -->
+    <!-- footer section (bottom of page with links and credits) -->
     <footer>
       <div class="container">
+        <!-- social media navigation links -->
         <nav class="social-links" aria-label="Social media">
+          <!-- facebook link -->
           <a
             href="https://facebook.com"
             target="_blank"
@@ -103,7 +118,7 @@
             aria-label="Facebook">
             Facebook
           </a>
-
+          <!-- twitter link -->
           <a
             href="https://twitter.com"
             target="_blank"
@@ -111,7 +126,7 @@
             aria-label="Twitter">
             Twitter
           </a>
-
+          <!-- instagram link -->
           <a
             href="https://instagram.com"
             target="_blank"
@@ -120,8 +135,8 @@
             Instagram
           </a>
         </nav>
-
-        <p>&copy; 2026 The 10 Best CA. Created for WD10S Final Project.</p>
+        <!-- copyright and project info -->
+        <p>&copy; 2026 The 10 Best CA. Created for Web Dev Final Project.</p>
       </div>
     </footer>
   </body>

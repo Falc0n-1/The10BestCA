@@ -1,60 +1,77 @@
+<!--
+  Name:          Ostap Voloshyn
+  Course:        Web Development 9
+  Teacher:       Mr. Hardman
+  School:        Pembina Trails Collegiate
+  Date Last Modified: June 18th, 2026 
+-->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- page title shown in browser tab -->
     <title>The Top 10 CA - Destinations</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:wght@400;700&display=swap"
-      rel="stylesheet" />
+    <!-- external css file (main stylesheet for layout, colors, and design system) -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-
   <body>
+    <!-- header section (top navigation bar shown on all pages) -->
     <header>
       <div class="container nav-container">
+        <!-- logo section (links back to homepage for easy navigation) -->
         <div class="logo">The10BestCA</div>
+        <!-- navigation menu -->
         <nav>
           <ul class="nav-links">
+            <!-- link to home page -->
             <li><a href="index.html">Home</a></li>
+            <!-- link to current page (top 10 list) -->
             <li>
-              <a href="top10.html" style="color: var(--primary-red)"
-                >The Top 10</a
-              >
+              <a href="top10.html" style="color: var(--primary-red)">
+                The Top 10
+              </a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-
+    <!-- main page content area -->
     <main>
+      <!-- intro section for page title and description -->
       <section class="container mt-2">
+        <!-- main heading for the page -->
         <h1 class="text-center">Top 10 Places in Canada</h1>
+        <!-- short description under heading -->
         <p class="text-center mb-2">
           Explore the most iconic and beautiful destinations in Canada.
         </p>
-
         <!-- 
-              CSS Grid Implementation for Responsive Design.
-              Cards animate on hover via CSS transitions.
-            -->
+          grid layout section
+          this section uses css grid to display destination cards in a responsive layout.
+          cards automatically adjust based on screen size and include hover animations.
+        -->
         <div class="grid-container">
-          <!-- Destination 1 -->
+          <!-- destination 1 card -->
           <article class="card">
+            <!-- image representing destination -->
             <img
               src="images/Banff National Park.jpg"
               alt="Banff National Park landscape"
               class="card-img" />
+            <!-- text content for destination -->
             <div class="card-content">
               <h2>1. Banff National Park, AB</h2>
               <p>
                 Famous for its surreal turquoise glacial lakes and majestic
-                mountain peaks.
+                mountain peaks. Visitors can enjoy hiking, canoeing, wildlife
+                viewing, and breathtaking scenery throughout the year. It is one
+                of Canada's most popular national parks and attracts millions of
+                tourists annually.
               </p>
             </div>
           </article>
-
-          <!-- Destination 2 -->
+          <!-- destination 2 card -->
           <article class="card">
             <img
               src="images/Niagara Falls.jpg"
@@ -64,12 +81,13 @@
               <h2>2. Niagara Falls, ON</h2>
               <p>
                 One of the most powerful and famous waterfalls in the entire
-                world.
+                world. The falls attract visitors from around the globe who come
+                to experience the incredible views and boat tours. It is one of
+                Canada's most recognizable natural landmarks.
               </p>
             </div>
           </article>
-
-          <!-- Destination 3 -->
+          <!-- destination 3 card -->
           <article class="card">
             <img
               src="images/CN Tower.jpg"
@@ -79,12 +97,13 @@
               <h2>3. CN Tower, Toronto, ON</h2>
               <p>
                 An iconic staple of the Toronto skyline offering incredible city
-                views.
+                views. Standing over 550 meters tall, it was once the world's
+                tallest free-standing structure. Visitors can enjoy observation
+                decks, restaurants, and the famous glass floor.
               </p>
             </div>
           </article>
-
-          <!-- Destination 4 -->
+          <!-- destination 4 card -->
           <article class="card">
             <img
               src="images/Old Quebec.jpg"
@@ -94,12 +113,14 @@
               <h2>4. Old Quebec, QC</h2>
               <p>
                 Step back in time with cobblestone streets and European
-                architecture.
+                architecture. As a UNESCO World Heritage Site, it preserves
+                centuries of Canadian and French history. Its charming
+                atmosphere makes it one of the most unique destinations in North
+                America.
               </p>
             </div>
           </article>
-
-          <!-- Destination 5 -->
+          <!-- destination 5 card -->
           <article class="card">
             <img
               src="images/Whistler.jpg"
@@ -109,12 +130,14 @@
               <h2>5. Whistler, BC</h2>
               <p>
                 A premier skiing destination and an outdoor adventurer's
-                paradise year-round.
+                paradise year-round. During the winter, visitors enjoy
+                world-class skiing and snowboarding. In warmer months, hiking,
+                mountain biking, and sightseeing attract travelers from around
+                the world.
               </p>
             </div>
           </article>
-
-          <!-- Destination 6 -->
+          <!-- destination 6 card -->
           <article class="card">
             <img
               src="images/Gros Morne.jpg"
@@ -123,13 +146,14 @@
             <div class="card-content">
               <h2>6. Gros Morne, NL</h2>
               <p>
-                A UNESCO World Heritage site known for dramatic fjords and
-                unique geology.
+                A UNESCO World Heritage Site known for dramatic fjords and
+                unique geology. The park showcases landscapes shaped by ancient
+                tectonic activity and glaciers. Visitors can explore hiking
+                trails, coastal scenery, and diverse wildlife.
               </p>
             </div>
           </article>
-
-          <!-- Destination 7 -->
+          <!-- destination 7 card -->
           <article class="card">
             <img
               src="images/Parliament Hill Ottawa.jpg"
@@ -139,12 +163,13 @@
               <h2>7. Parliament Hill, Ottawa, ON</h2>
               <p>
                 The political heart of Canada, featuring stunning Gothic Revival
-                architecture.
+                architecture. It is home to important government buildings and
+                national celebrations throughout the year. Visitors can also
+                enjoy guided tours and beautiful views of the Ottawa River.
               </p>
             </div>
           </article>
-
-          <!-- Destination 8 -->
+          <!-- destination 8 card -->
           <article class="card">
             <img
               src="images/Bay of Fundy.jpg"
@@ -154,12 +179,13 @@
               <h2>8. Bay of Fundy, NB/NS</h2>
               <p>
                 Home to the highest tides in the world and amazing rock
-                formations.
+                formations. The tides dramatically transform the coastline each
+                day, creating unique opportunities for exploration. Visitors can
+                walk on the ocean floor during low tide and kayak at high tide.
               </p>
             </div>
           </article>
-
-          <!-- Destination 9 -->
+          <!-- destination 9 card -->
           <article class="card">
             <img
               src="images/Stanley Park Vancouver.jpg"
@@ -169,12 +195,13 @@
               <h2>9. Stanley Park, Vancouver, BC</h2>
               <p>
                 A massive urban oasis featuring a scenic seawall and ancient
-                cedars.
+                cedars. The park offers beaches, walking trails, gardens, and
+                cultural attractions within Vancouver's city limits. It is
+                widely regarded as one of the best urban parks in the world.
               </p>
             </div>
           </article>
-
-          <!-- Destination 10 -->
+          <!-- destination 10 card -->
           <article class="card">
             <img
               src="images/Churchill.jpg"
@@ -184,22 +211,26 @@
               <h2>10. Churchill, MB</h2>
               <p>
                 The polar bear capital of the world and a great place to see the
-                Northern Lights.
+                Northern Lights. Wildlife enthusiasts visit to observe polar
+                bears, beluga whales, and other Arctic species. Its remote
+                northern location provides unforgettable natural experiences.
               </p>
             </div>
           </article>
         </div>
       </section>
-
-      <!-- Contact Form Section (Interactive Element Requirement) -->
+      <!-- contact section (interactive form for user feedback) -->
       <section class="contact-section">
         <div class="container">
+          <!-- section title -->
           <h2 class="text-center">Have a suggestion?</h2>
+          <!-- short instruction text -->
           <p class="text-center mb-2">
             Let us know if there's a destination we missed!
           </p>
-
+          <!-- contact form (collects user input but does not send data anywhere) -->
           <form class="contact-form" action="#" method="GET">
+            <!-- name input field -->
             <div class="form-group">
               <label for="name">Name:</label>
               <input
@@ -209,6 +240,7 @@
                 required
                 placeholder="Your name" />
             </div>
+            <!-- email input field -->
             <div class="form-group">
               <label for="email">Email:</label>
               <input
@@ -218,6 +250,7 @@
                 required
                 placeholder="Your email" />
             </div>
+            <!-- message input field -->
             <div class="form-group">
               <label for="message">Message:</label>
               <textarea
@@ -227,6 +260,7 @@
                 required
                 placeholder="Tell us your favorite spot in Canada!"></textarea>
             </div>
+            <!-- submit button -->
             <button
               type="submit"
               class="btn-primary"
@@ -237,33 +271,38 @@
         </div>
       </section>
     </main>
-
+    <!-- footer section -->
     <footer>
       <div class="container">
+        <!-- social media links -->
         <div class="social-links">
+          <!-- facebook link -->
           <a
             href="https://facebook.com"
             target="_blank"
             rel="noopener"
-            aria-label="Facebook"
-            >Facebook</a
-          >
+            aria-label="Facebook">
+            Facebook
+          </a>
+          <!-- twitter link -->
           <a
             href="https://twitter.com"
             target="_blank"
             rel="noopener"
-            aria-label="Twitter"
-            >Twitter</a
-          >
+            aria-label="Twitter">
+            Twitter
+          </a>
+          <!-- instagram link -->
           <a
             href="https://instagram.com"
             target="_blank"
             rel="noopener"
-            aria-label="Instagram"
-            >Instagram</a
-          >
+            aria-label="Instagram">
+            Instagram
+          </a>
         </div>
-        <p>&copy; 2026 The 10 Best CA. Created for WD10S Final Project.</p>
+        <!-- copyright text -->
+        <p>&copy; 2026 The 10 Best CA. Created for Web Dev Final Project.</p>
       </div>
     </footer>
   </body>
